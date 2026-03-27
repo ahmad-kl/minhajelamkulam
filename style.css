@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-dark: #0b3629;
+    --text-main: #FFFFFF;
+    --text-muted: #A3B8B0;
+    --accent-gold: #d4af37;
+    --accent-hover: #e8c555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6%;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-gold);
+}
+
+/* BUTTON */
+.btn {
+    background-color: var(--accent-gold);
+    color: #000;
+    padding: 0.7rem 1.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-decoration: none; 
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6%;
+}
+
+.hero-content {
+    max-width: 55%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+}
+
+.hero p {
+    color: var(--text-muted);
+    margin: 1.5rem 0;
+}
+
+/* IMAGE */
+.hero-image-container {
+    position: relative;
+    width: 30%;
+}
+
+.hero-image-container::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-gold);
+    border-radius: 8px;
+}
+
+.hero-image {
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- ABOUT SECTION (Text Only Design) --- */
+.about {
+    padding: 6rem 6%;
+    background-color: var(--bg-dark);
+}
+
+.about-layout {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: var(--text-main);
+}
+
+.about-text p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 2.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat-item h4 {
+    color: var(--accent-gold);
+    font-size: 2.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.stat-item p {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* --- SERVICES SECTION (Updated Design) --- */
+.services {
+    padding: 6rem 6%;
+    background-color: var(--bg-dark);
+}
+
+.services-header {
+    text-align: left;
+    margin-bottom: 3.5rem;
+}
+
+.services-tagline {
+    color: #d8f37e; 
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.services-header h2 {
+    font-size: 2.8rem;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #0b453a; 
+    padding: 2.5rem;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.service-icon {
+    background-color: #d8f37e; 
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.service-icon i {
+    color: #0b3629; 
+    font-size: 1.6rem;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* --- PORTFOLIO LAYOUT --- */
+.portfolio {
+    padding: 5rem 6%;
+}
+
+.portfolio-layout {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.portfolio-content {
+    flex: 3;
+    min-width: 0;
+}
+
+/* --- PORTFOLIO GRID (HORIZONTAL SCROLL) --- */
+.portfolio-grid {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 2rem;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    align-items: flex-start; 
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-gold) rgba(255, 255, 255, 0.05);
+}
+
+.portfolio-grid::-webkit-scrollbar { height: 8px; }
+.portfolio-grid::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
+.portfolio-grid::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 10px; }
+
+/* --- UNIFORM PORTFOLIO CARDS --- */
+.portfolio-card {
+    background-color: #0b453a; 
+    padding: 15px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    border: none;
+    flex: 0 0 320px; 
+    scroll-snap-align: start;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* --- VIDEO CONTAINER --- */
+.card-video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Normal Landscape size */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    background-color: #000; /* Loading time-il iruttil nikkum */
+}
+
+/* REEL VIDEO SIZE (9:16) */
+.card-video-wrapper.reel {
+    aspect-ratio: 9 / 16; /* Vertical shape for Reels */
+}
+
+/* 480x640 VIDEO SIZE (Puthiya Code - 3:4 Ratio) */
+.card-video-wrapper.ratio-3-4 {
+    aspect-ratio: 3 / 4;
+}
+
+/* --- VIDEO FIT --- */
+.card-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover .card-video-wrapper video {
+    transform: scale(1.05);
+}
+
+/* --- CARD TEXT --- */
+.card-info h3 {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.card-info .sub-text {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* --- FOOTER & SOCIAL ICONS --- */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-image-container {
+        width: 70%;
+        margin-top: 2rem;
+    }
+
+    nav ul {
+        display: none;
+    }
+    
+    .portfolio-layout {
+        flex-direction: column;
+    }
+    
+    /* Uniform Mobile Card Width */
+    .portfolio-card { 
+        flex: 0 0 280px; 
+    }
+}
